@@ -10,7 +10,7 @@ jobs:
       fail-fast: false
       matrix:
         projectPath:
-          - Unity CI/
+          - ../Unity CI/
         testMode:
           - playmode
     steps:
