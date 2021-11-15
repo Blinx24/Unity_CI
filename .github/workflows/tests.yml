@@ -1,5 +1,7 @@
 name: Test project
+
 on: [push, pull_request]
+
 jobs:
   testAllModes:
     name: Test in ${{ matrix.testMode }}
