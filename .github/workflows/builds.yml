@@ -2,16 +2,16 @@ name: Build project
 on: [push, pull_request]
 jobs:
  buildForAllSupportedPlatforms:
- name: Build for ${{ matrix.targetPlatform }}
- runs-on: ubuntu-latest
- strategy:
-  fail-fast: false
-  matrix:
+  name: Build for ${{ matrix.targetPlatform }}
+  runs-on: ubuntu-latest
+  strategy:
+   fail-fast: false
+   matrix:
     targetPlatform:
-      - StandaloneWindows # Build a Windows standalone.
-      - StandaloneWindows64 # Build a Windows 64-bit standalone.
-      - StandaloneLinux64 # Build a Linux 64-bit standalone.
- steps:
+     - StandaloneWindows # Build a Windows standalone.
+     - StandaloneWindows64 # Build a Windows 64-bit standalone.
+     - StandaloneLinux64 # Build a Linux 64-bit standalone.
+  steps:
   - uses: actions/checkout@v2
     with:
       fetch-depth: 0
